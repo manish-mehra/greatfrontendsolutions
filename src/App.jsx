@@ -50,7 +50,7 @@ export default function App() {
       <div className='mb-4 p-2 bg-gray-100 rounded-md'>
        <p className='text-xs font-medium pb-1'>
        These questions were originally curated from a GitHub repository created by <a href='https://github.com/ghoshsuman845' className='underline text-blue-600'>Suman Ghosh</a>. I have compiled and categorized them on this website for convenience. 
-       This website is open source! You can find the codebase and contribute on my <a href="#" className='underline text-blue-600'>GitHub repository</a>. Feel free to collaborate and improve the experience for everyone.
+       This website is open source! You can find the codebase and contribute on my <a href="https://github.com/manish-mehra/greatfrontendsolutions" className='underline text-blue-600'>GitHub repository</a>. Feel free to collaborate and improve the experience for everyone.
         </p>
       </div>
 
