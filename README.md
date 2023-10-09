@@ -1,6 +1,7 @@
 # JavaScript Challenges from Great Frontend
 
 Welcome to the curated collection of JavaScript challenges from the Great Frontend website, complete with solutions!
+![image](https://github.com/manish-mehra/greatfrontendsolutions/assets/31545725/88cff389-de10-4653-a7d8-06f90072b19d)
 
 ## Purpose
 
