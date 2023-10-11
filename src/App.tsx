@@ -124,8 +124,8 @@ const App = () => {
       </div>
 
       <div className="flex flex-col w-full">
-        <div className="flex w-full items-center justify-between">
-          <p className="font-medium">Questions</p>
+        <div className="flex w-full items-center justify-between pb-2">
+          <p className="font-semibold">Questions</p>
           <Select value={selectedCategory} onValueChange={setSelectedCategory}>
             <SelectTrigger className="w-24 md:w-[180px]">
               <SelectValue placeholder="Difficulty" />
@@ -138,6 +138,9 @@ const App = () => {
               ))}
             </SelectContent>
           </Select>
+        </div>
+        <div className="w-full flex items-center justify-end">
+          <span className="text-md text-green-500">{solvedQuestions.length}</span>/<span className="text-sm">{q_data.length}</span>
         </div>
         <Accordion type="single" collapsible>
           {filteredData.map((item, index) => (
