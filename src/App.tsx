@@ -192,7 +192,7 @@ const App = () => {
                         return <CodeBlock code={props.children} />;
                       } else {
                         return (
-                          <code className="bg-gray-100 px-1 rounded-md">
+                          <code className="bg-gray-100 dark:bg-gray-500 px-1 rounded-md">
                             {props.children}
                           </code>
                         );
