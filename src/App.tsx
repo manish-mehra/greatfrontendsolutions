@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import ThemeToggle from "./components/custom/theme-toggle";
 
 // icons
@@ -58,6 +58,17 @@ const App = () => {
   const [showCode, setShowCode] = useState(false);
   const [filteredData, setFilteredData] = useState(q_data);
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
+
+  const questionRef = useRef<HTMLDivElement>(null);
+  const [scrollToQuestionId, setScrollToQuestionId] = useState<number | null>(null);
+
+  useEffect(() => {
+    if(scrollToQuestionId !== null && questionRef.current){
+     setTimeout(() => {
+      questionRef.current?.scrollIntoView({behavior: 'smooth', inline: 'nearest', block: 'start' })
+     }, 200)
+    }
+  }, [scrollToQuestionId])
 
   useEffect(() => {
     if (selectedCategory === "All") {
@@ -148,6 +159,8 @@ const App = () => {
               value={`item-${index}`}
               key={index}
               className="w-full"
+              ref={index === scrollToQuestionId ? questionRef : null}
+              onClick={() => setScrollToQuestionId(index)}
             >
               <div className="flex w-full items-center justify-between">
                 <AccordionTrigger onClick={() => setShowCode(false)}>
